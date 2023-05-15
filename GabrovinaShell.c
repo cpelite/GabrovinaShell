@@ -14,7 +14,7 @@ int prose(void) {
 }
 
 int info(void) {
-    printf("GabrovinaShell v0.0.2 \nDeveloper: CPElite / ZlatinaDev");
+    printf("GabrovinaShell v0.0.3 \nDeveloper: CPElite / ZlatinaDev");
     printf("Written using: plain old C, although i do not really know what i'm doing here.");
     //trick to stop further execution of program
     main();
@@ -134,7 +134,7 @@ int admshellmain(void)
 int main()
 {
     int choice;
-    printf("\n[GABROVINASHELL - v0.0.2]");
+    printf("\n[GABROVINASHELL - v0.0.3]");
     printf("\n[user > gabsh]");
     scanf_s("%d", &choice);
 
