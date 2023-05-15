@@ -1,6 +1,8 @@
 #include <stdio.h>
 #include <stdlib.h>
+#include <Windows.h>
 
+//regular functions start here, too lazy to figure out how to move to different files...
 int prose(void) {
 
 
@@ -63,27 +65,112 @@ int commlist(void)
     main();
 }
 
+// regular functions end here.
+
+// administrative functions start here.
+
+int admshellinit(void) {
+    printf("Attention! Administrative functions are not properly implemented yet, there are quite certainly severe bugs!");
+    printf("\nType 1 to continue, type 2 to unload administrative functions.");
+    int admchoice;
+    scanf_s("%d", &admchoice);
+    if (admchoice == 1) {
+        admshellmain();
+    }
+
+    else {
+        printf("Unloading administrative functions.");
+        main();
+    }
+}
+
+int admshellstartmessage(void) {
+    printf("Administrative functions have been loaded correctly!");
+    admshellmain();
+}
+
+int admshellhelp() {
+    printf("\nAdministrative functions do work similiar to the normal functions of the shell. Numbers are used to choose the program you want to call.");
+    printf("\n10 - shows a simple message to confirm that administrative functions have been loaded correctly. \n20 - displays this menu. \n30 - Gets current working directory.");
+    admshellmain();
+}
+
+int getcurrdir() {
+    printf("I'm sorry, but this command is not implemented yet.");
+    admshellmain();
+}
+
+int admshellmain(void) 
+{
+    int admfunctchoice;
+    printf("\n[adm > gabsh]");
+    scanf_s("%d", &admfunctchoice);
+
+    if (admfunctchoice == 10) {
+        admshellstartmessage();
+    }
+
+    if (admfunctchoice == 20) {
+        admshellhelp();
+    }
+
+    if (admfunctchoice == 30) {
+        getcurrdir();
+    }
+
+    if (admfunctchoice == 99) {
+        printf("Unloading administrative functions.");
+        main();
+    }
+
+    else {
+        printf("Command not recognized. Type 20 for a list of valid commands.");
+        admshellmain();
+    }
+
+}
+// administrative functions end here.
+
 int main()
 {
     int choice;
-    printf("[GABROVINASHELL] - Please enter a command: ");
+    printf("\n[GABROVINASHELL - v0.0.2]");
+    printf("\n[user > gabsh]");
     scanf_s("%d", &choice);
-    if (choice == 1)
+
+    if (choice == 1) {
         prose();
+    }
 
-    if (choice == 2)
+    if (choice == 2) {
         info();
-
-    if (choice == 3)
+    }
+    
+    if (choice == 3) {
         calc();
+    }
 
-    if (choice == 4)
+    if (choice == 4) {
         commlist();
+    }
 
-    if (choice == 5)
+    if (choice == 5) {
         system("@cls || clear");
         main();
+    }
 
-    return 0;
-    
+    if (choice == 60) {
+        admshellinit();
+    }
+
+    if (choice == 61) {
+        printf("Terminating. Press a key to exit GabrovinaShell.");
+        _getch();
+        return 0;
+
+    }
+
+    else {
+        printf("Command not recognized. Type 4 for a list of valid commands.");
+    }
 }
