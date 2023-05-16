@@ -49,6 +49,10 @@ int shellmain()
         terminus();
     }
 
+    else if (choice == 99) {
+        errorhandlertest();
+    }
+
     else {
         printf("Command not recognized. Type 4 for a list of valid commands.");
     }

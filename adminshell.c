@@ -1,4 +1,6 @@
 #include "adminshell.h"
+#include <windows.h>
+#include "errhandler.h"
 
 void admshellinit(void) {
     printf("Attention! Administrative functions are not properly implemented yet, there are quite certainly severe bugs!");
@@ -22,13 +24,25 @@ void admshellstartmessage(void) {
 
 void admshellhelp() {
     printf("\nAdministrative functions do work similiar to the normal functions of the shell. Numbers are used to choose the program you want to call.");
-    printf("\n10 - shows a simple message to confirm that administrative functions have been loaded correctly. \n20 - displays this menu. \n30 - Gets current working directory.");
+    printf("\n10 - shows a simple message to confirm that administrative functions have been loaded correctly. \n20 - displays this menu. \n30 - Gets current working directory. \n999 - calls the test function of the error handler.");
     admshellmain();
 }
 
 void getcurrdir() {
-    printf("I'm sorry, but this command is not implemented yet.");
-    admshellmain();
+    TCHAR tszBuffer[MAX_PATH];
+    DWORD dwRet; 
+
+    dwRet = GetCurrentDirectoryA(MAX_PATH, tszBuffer);
+    if (dwRet == 0) {
+        printf("ERROR! Calling error screen!");
+        getcurrdirerror();
+    }
+
+    else {
+        printf("Current working directory is: \n");
+        printf("%s", tszBuffer);
+        admshellmain();
+    }
 }
 
 void admshellmain(void)
@@ -54,8 +68,12 @@ void admshellmain(void)
         shellmain();
     }
 
+    else if (admfunctchoice == 999) {
+        errorhandlertest();
+    }
+
     else {
-        printf("Command not recognized. Type 20 for a list of valid commands.");
+        printf("\nCommand not recognized. Type 20 for a list of valid commands.");
         admshellmain();
     }
 

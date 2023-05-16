@@ -20,6 +20,8 @@ Commands are represented by numbers because of the easier manageability (at leas
 
 61 - exits the shell.
 
+99 - calls the test function of the errorhandler.
+
 # Commands (administrative mode)
 
 Just like in the normal mode, the commands are represented by numbers. The following commands are currently implemented:
@@ -31,3 +33,5 @@ Just like in the normal mode, the commands are represented by numbers. The follo
 30 - displays the current directory.
 
 99 - exits the administrative mode and returns to the normal mode.
+
+999 - calls the test function of the error handler.

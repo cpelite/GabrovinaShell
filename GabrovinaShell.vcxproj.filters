@@ -18,5 +18,25 @@
     <ClCompile Include="GabrovinaShell.c">
       <Filter>Quelldateien</Filter>
     </ClCompile>
+    <ClCompile Include="adminshell.c">
+      <Filter>Quelldateien</Filter>
+    </ClCompile>
+    <ClCompile Include="comms.c">
+      <Filter>Quelldateien</Filter>
+    </ClCompile>
+    <ClCompile Include="errhandler.c">
+      <Filter>Quelldateien</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="adminshell.h">
+      <Filter>Headerdateien</Filter>
+    </ClInclude>
+    <ClInclude Include="comms.h">
+      <Filter>Headerdateien</Filter>
+    </ClInclude>
+    <ClInclude Include="errhandler.h">
+      <Filter>Headerdateien</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>
