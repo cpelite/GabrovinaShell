@@ -128,7 +128,13 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="adminshell.c" />
+    <ClCompile Include="comms.c" />
     <ClCompile Include="GabrovinaShell.c" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="adminshell.h" />
+    <ClInclude Include="comms.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
