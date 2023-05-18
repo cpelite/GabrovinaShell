@@ -39,3 +39,12 @@ void errorhandlertest(void) {
 	}
 
 }
+
+void fwerror(void) {
+	
+	printf("\nError while writing to file!");
+	printf("\nPress a key to return to the shell.");
+	_getch();
+	admshellmain();
+	
+}

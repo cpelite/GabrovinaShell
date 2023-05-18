@@ -1,6 +1,8 @@
 #include "adminshell.h"
 #include <windows.h>
 #include "errhandler.h"
+#include <stdio.h>
+#include <stdlib.h>
 
 void admshellinit(void) {
     printf("Attention! Administrative functions are not properly implemented yet, there are quite certainly severe bugs!");
@@ -45,6 +47,11 @@ void getcurrdir() {
     }
 }
 
+void filewriter() {
+    printf("Sorry! Command is not implemented yet!");
+    admshellmain;
+}
+
 void admshellmain(void)
 {
     int admfunctchoice;
@@ -61,6 +68,10 @@ void admshellmain(void)
 
     else if (admfunctchoice == 30) {
         getcurrdir();
+    }
+
+    else if (admfunctchoice == 40) {
+        filewriter();
     }
 
     else if (admfunctchoice == 99) {
