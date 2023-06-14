@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <Windows.h>
-#include "src/headers/comms.h"
+#include "comms.h"
 
 char version[] = "v1.0";
 
@@ -10,7 +10,7 @@ int shellinit() {
     printf("%s", version);
     printf("]");
     printf("\nPress a key to continue.");
-    _getch();
+    //_getch();
     shellmain();
 }
 
@@ -55,6 +55,7 @@ int shellmain()
 
     else {
         printf("Command not recognized. Type 4 for a list of valid commands.");
+        shellmain();
     }
 }
 

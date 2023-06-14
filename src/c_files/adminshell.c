@@ -1,6 +1,6 @@
-#include "src/headers/adminshell.h"
+#include "adminshell.h"
 #include <windows.h>
-#include "src/headers/errhandler.h"
+#include "errhandler.h"
 #include <stdio.h>
 #include <stdlib.h>
 
@@ -48,8 +48,7 @@ void getcurrdir() {
 }
 
 void filewriter() {
-    printf("Sorry! Command is not implemented yet!");
-    admshellmain;
+    commnotimplemented();
 }
 
 void admshellmain(void)

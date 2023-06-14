@@ -1,5 +1,6 @@
 #pragma once
-#include "src/headers/errhandler.h"
+#include "errhandler.h"
+#include "adminshell.h"
 
 void getcurrdirerror(void) {
 
@@ -27,10 +28,10 @@ void errorhandlertest(void) {
 
 	int errhandlertest;
 	printf("\nError handler has been succesfully loaded!");
-	printf("\nNo further input required. \nPress 1 to continue if called from normal mode, 2 to continue if called from administrative mode.");
+	printf("\nNo further input required. \nPress 1 to return to normal shell, press 2 to return to administrative mode.");
 	scanf_s("%d", &errhandlertest);
 
-	if (errhandlertest = 1) {
+	if (errhandlertest == 1) {
 		shellmain();
 	}
 
@@ -47,4 +48,22 @@ void fwerror(void) {
 	_getch();
 	admshellmain();
 	
+}
+
+void commnotimplemented(void) {
+
+    int shchoice;
+    printf("Sorry! The command you tried to call has not been implemented yet. \nPress 1 to return to normal shell, press 2 to return to administrative mode.");
+    scanf_s("%d", &shchoice);
+
+    if (shchoice == 1) {
+        shellmain();
+    }
+
+    else if (shchoice == 2) {
+        admshellmain();
+    }
+
+
+
 }
