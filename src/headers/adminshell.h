@@ -3,3 +3,4 @@ void admshellstartmessage(void);
 void admshellhelp(void);
 void getcurrdir(void);
 void admshellmain(void);
+void filewriter(void);

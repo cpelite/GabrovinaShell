@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <Windows.h>
-#include "comms.h"
+#include "src/headers/comms.h"
 
 char version[] = "v1.0";
 
@@ -47,6 +47,10 @@ int shellmain()
 
     else if (choice == 61) {
         terminus();
+    }
+
+    else if (choice == 99) {
+        errorhandlertest();
     }
 
     else {

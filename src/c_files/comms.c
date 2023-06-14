@@ -1,4 +1,4 @@
-#include "comms.h"
+#include "src/headers/comms.h"
 
 char ver2[] = "v1.0";
 
@@ -64,7 +64,7 @@ void calc()
 void commlist(void)
 {
     printf("GabrovinaShell uses numbers to call functions, at least for now.");
-    printf("The following commands are implemented at the current moment: 1 - writes some prose. \n2 - shows some information. \n3 - opens the calculator. \n4 - shows this list. \n5 - clears the screen. \n60 - loads administrative commands. \n61 - terminates the shell.");
+    printf("The following commands are implemented at the current moment: 1 - writes some prose. \n2 - shows some information. \n3 - opens the calculator. \n4 - shows this list. \n5 - clears the screen. \n60 - loads administrative commands. \n61 - terminates the shell. \n999 - calls the test function of the error handler.");
     shellmain();
 }
 
