@@ -1,6 +1,6 @@
-#include "adminshell.h"
+#include "src/headers/adminshell.h"
 #include <windows.h>
-#include "errhandler.h"
+#include "src/headers/errhandler.h"
 #include <stdio.h>
 #include <stdlib.h>
 
